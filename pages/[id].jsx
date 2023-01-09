@@ -28,15 +28,15 @@ const Details = ({data}) => {
   )
 }
 
-export async function getStaticPaths(){
-    let res = await fetch(`http://localhost:8080/movieData`)
-    let data = await res.json();
-    return {
-        paths:data.map((item)=>({params:{id:String(item.id)}})),
-        fallback:false
-    }
-}
-export async function getStaticProps(context){
+// export async function getStaticPaths(){
+//     let res = await fetch(`http://localhost:8080/movieData`)
+//     let data = await res.json();
+//     return {
+//         paths:data.map((item)=>({params:{id:String(item.id)}})),
+//         fallback:false
+//     }
+// }
+export async function getServerSideProps(context){
     let id = context.params.id
     let res = await fetch(`http://localhost:8080/movieData/${id}`);
     res = await res.json();
