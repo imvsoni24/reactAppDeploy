@@ -1,6 +1,6 @@
 import { Grid } from '@chakra-ui/react';
 import Head from 'next/head'
-import MovieCard from '../components/movieCard';
+import MovieCard from '../component/movieCard';
 import { useRouter } from 'next/router';
 
 export default function Movie({data}) {

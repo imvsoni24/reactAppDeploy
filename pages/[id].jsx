@@ -1,5 +1,5 @@
 import React from 'react'
-import MovieDetails from '../components/movieDetails';
+import MovieDetails from '../component/movieDetails';
 import { useRouter } from 'next/router';
 
 const Details = ({data}) => {
